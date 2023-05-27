@@ -1,0 +1,409 @@
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: sans-serif;
+scroll-behavior: smooth;
+width: 100%;
+overflow-y: hidden;
+}
+a{
+    text-decoration: none;
+}
+hr{
+    color: #999;
+}
+ul{
+    list-style-type: none;
+}
+/* start navbar */
+.navbar{
+    width: 100%;
+    height: 70px;
+    padding: 10px  40px;
+
+}
+.navbar>.sides{
+width: 100%;
+  display: flex;
+justify-content: space-between;
+}
+.navbar>.sides>.left{
+    display: flex;
+    align-items: center;
+    /* width: 20%; */
+
+}
+.navbar>.sides>.left>a{
+    margin-left: 20px;
+}
+.navbar>.sides>.left>a>span{
+    font-size: 25px;
+    font-weight: 700;
+    color: black;
+ position: relative;
+ /* top: 2px; */
+ vertical-align: middle;
+}
+.navbar>.sides>.left>.fa-bars{
+    color: black;
+    vertical-align: middle;
+  
+    cursor: pointer;
+}
+.navbar>.sides>.left>a>span::after{
+    position: absolute;
+    content: "EG";
+    font-size: 12px;
+padding:  0 5px;
+    color: #777;
+}
+.navbar>.sides>.middle{
+    display: flex;
+    align-items: center;
+
+
+}
+ 
+
+
+
+.navbar>.sides>.middle>.mic{
+margin: 10px auto 10px;
+vertical-align: middle;
+
+
+}
+.navbar>.sides>.middle>.mic>i{
+    cursor: pointer;
+}
+
+.navbar>.sides>.middle>.search{
+   width: 700px;
+padding-right: 20px;
+}
+.navbar>.sides>.middle>.search>form>.input-group>input{
+    width: 100%;
+    border-radius: 30px;
+    padding: 10px;
+}
+.navbar>.sides>.middle>.search>form>.input-group> .search-btn{
+     border-radius: 0px 30px 30px 0px;
+    cursor:pointer;
+    padding: 10px;
+    color: black;
+border: 1px solid #999;
+background-color: rgb(248, 248, 248);
+}
+.navbar>.sides>.middle>.search>form>.input-group> .search-btn:hover{
+     background-color: #999;
+}
+
+.navbar>.sides>.right{
+    display: flex;
+    align-items: center;
+
+   justify-content: flex-end;
+
+}
+.navbar>.sides>.right>.signup{
+    margin-left: 20px;
+}
+.navbar>.sides>.right>.signup>form>.btn{
+    background-color: #f8f8f8;
+    border: none rgb(6, 95, 212);
+
+    border-radius: 30px;
+margin-top: auto;
+margin-bottom: 10px;
+}
+.navbar>.sides>.right>.signup>form>button>.bi{
+    color: rgb(0, 106, 255);
+
+}
+.navbar>.sides>.right>.signup>form>button>span{
+    margin-left: 10px;
+    color: rgb(0, 106, 255);
+}
+.navbar>.sides>.right>.signup>form>.btn:hover{
+    background-color: #c9dcf6;
+
+}
+.btn_open{
+    border: none;
+    background-color: transparent;
+
+}
+/* end navbar */
+
+/* start main content */
+
+.main{
+    width: 100%;
+
+    height: 100%;
+    background-color: #f9f9f9;
+}
+
+.main>.row>.col-md-2>aside{
+background-color: white;
+
+width:  0px;
+border-left: 1px solid ;
+overflow-y: auto;
+z-index: 1000;
+
+height: 100%;
+position: fixed;
+
+
+transition: 0.5s ease-in-out;
+}
+.main>.row>.col-md-2>#aside.active{
+ max-width: 250px;
+ width: 100%;
+
+}
+
+.main>.row>.col-md-2>aside>ul{
+    display: flex;
+    flex-direction: column;
+  
+}
+.main>.row>.col-md-2>aside>ul>li{
+
+display: flex;
+align-items: center;
+padding: 10px;
+
+}
+.main>.row>.col-md-2>aside>ul>li>a>span{
+margin: 10px;
+}
+
+.main>.row>.col-md-2>aside>ul>li>.activea{
+    font-size: 15px;
+    font-weight: 600;
+color: black;
+
+
+}
+.main>.row>.col-md-2>aside>ul>li>a{
+    font-size: 15px;
+    font-weight: 400;
+color: black;
+
+
+}
+.main>.row>.col-md-2>aside>ul>li>a>i{
+    font-size: 25px;
+}
+
+.main>.row>.col-md-2>aside>ul>li>.signup>form>.btn{
+    background-color: #f8f8f8;
+    border: none rgb(6, 95, 212);
+
+    border-radius: 30px;
+margin-top: auto;
+margin-bottom: 10px;
+}
+.main>.row>.col-md-2>aside>ul>li>.signup>form>button>.bi{
+    color: rgb(0, 106, 255);
+
+}
+.main>.row>.col-md-2>aside>ul>li>.signup>form>button>span{
+    margin-left: 10px;
+    color: rgb(0, 106, 255);
+}
+.main>.row>.col-md-2>aside>ul>li>.signup>form>.btn:hover{
+    background-color: #c9dcf6;
+
+}
+.main>.row>.col-md-2>aside>ul>h4{
+    line-height: 1.8;
+    letter-spacing: .5px;
+    margin-left: 15px;
+    font-size: 20px;
+}
+.main>.row>.col-md-2>aside>ul>li>.foot{
+color: #555;
+line-height: 1.3;
+letter-spacing: 1px;
+font-size: 15px;
+
+}
+.main>.row>.col-md-2>aside>ul>li>small{
+    color: #777;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+.main>.row>.col-md-2>aside>ul>li:hover{
+    background: #f5f5f5;
+   border-radius: 15px;
+}
+.main>.row{
+    width: 100%;
+}
+.main>.row>.col-md-10{
+background-color: white;
+width: calc(100% -250px);
+
+height: 100%;
+border-top: 1px solid #999;
+}
+
+
+.main>.row>.col-md-10>.next>.row>.col-md-6>.card{
+width: 100%;
+    border-radius: 20px;
+
+  }
+  .main>.row>.col-md-10>.next>.row>.col-md-6>a>.card>img{
+      width: 100%;
+      height: 180px;
+  }
+  .main>.row>.col-md-10>.next>.row>.col-md-6>a>.card>.card-body>.card-logo>img{
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      padding: 10px 20px 10px 10px;
+
+  }
+  .main>.row>.col-md-10>.next>.row>.col-md-6>a>.card>.card-body>.card-text>p,
+  .main>.row>.col-md-10>.next>.row>.col-md-6>a>.card>.card-body>.card-text>span{
+      color: #777;
+  }
+  .main>.row>.col-md-10>.next>.row>.col-md-6>a>.card>.card-body>.card-text>.title{
+      color: black;
+      font-size: 20px;
+      font-weight:700;
+      line-height: 1.2;
+      letter-spacing: 1px;
+  }
+  .main>.row>.col-md-10>.next>.row>.col-md-6>a>.card:hover{
+      scale: 1.1;
+  }
+
+/* end main content */
+
+@media  (min-width:300px) and (max-width:580px) {
+    .navbar>.sides>.middle>.search{
+        width: 50px;
+    }
+    .navbar>.sides>.middle{
+        width: 10%;
+       
+    }
+    .navbar>.sides>.left{
+        width: 50%;
+
+    }
+    .navbar>.sides>.right{
+        width: 40%;
+
+    }
+    .navbar>.sides>.middle>.mic{
+        display: none;
+    }
+
+    .main>.row>.col-md-10>.next>.row>.col-md-6>.card{
+        width: 100%;
+            border-radius: 20px;
+        
+          }
+          .main>.row>.col-md-10>.next>.row>.col-md-6{
+              width: 450px;
+              margin: auto auto auto 80px;
+              padding: 10px;
+            
+          }
+   
+          .main>.row>.col-md-10>.next>.row>.col-md-6>a>.card>img{
+              width: 100%;
+              height: 180px;
+          }
+          .main>.row>.col-md-10>.next>.row>.col-md-6>a>.card>.card-body>.card-logo>img{
+              width: 90px;
+              height: 90px;
+              border-radius: 50%;
+              padding: 10px 20px 10px 10px;
+        
+          }
+}
+@media  (min-width:581px) and (max-width:768px){
+    .navbar>.sides>.middle>.search{
+        width: 100px;
+    }
+    .navbar>.sides>.middle{
+        width: 15%;
+    }
+    .navbar>.sides>.left{
+        width: 45%;
+
+    }
+    .navbar>.sides>.right{
+        width: 40%;
+    }
+    .navbar>.sides>.middle>.mic{
+        display: none;
+    }
+    .main>.row>.col-md-10>.next>.row>.col-md-6>.card{
+        width: 100%;
+            border-radius: 20px;
+        
+          }
+          .main>.row>.col-md-10>.next>.row>.col-md-6{
+              width: 350px;
+              margin: auto ;
+              padding: 8px;
+            
+          }
+   
+          .main>.row>.col-md-10>.next>.row>.col-md-6>a>.card>img{
+              width: 100%;
+              height: 180px;
+          }
+          .main>.row>.col-md-10>.next>.row>.col-md-6>a>.card>.card-body>.card-logo>img{
+              width: 90px;
+              height: 90px;
+              border-radius: 50%;
+              padding: 10px 20px 10px 10px;
+        
+          }
+}
+
+@media  (min-width:769px) and (max-width:992px){
+    .main>.row>.col-md-10>.next>.row>.col-md-6>.card{
+        width: 100%;
+            border-radius: 20px;
+        
+          }
+          .main>.row>.col-md-10>.next>.row>.col-md-6{
+              width: 300px;
+              margin: auto ;
+              padding: 5px;
+            
+          }
+   
+          .main>.row>.col-md-10>.next>.row>.col-md-6>a>.card>img{
+              width: 100%;
+              height: 180px;
+          }
+          .main>.row>.col-md-10>.next>.row>.col-md-6>a>.card>.card-body>.card-logo>img{
+              width: 90px;
+              height: 90px;
+              border-radius: 50%;
+              padding: 10px 20px 10px 10px;
+        
+          }
+}
+
+
+
+
